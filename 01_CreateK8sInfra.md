@@ -1,10 +1,13 @@
 # Install kubectl
 
-## Pre-requisite: Install docker desktop
+## Pre-requisite: 
+- Install docker desktop
+- Install chocolatey package manager
+- Install curl
 
 ## Download the latest release of kubectl
 ```sh
-curl -LO "https://dl.k8s.io/release/$(curl -s https://dl.k8s.io/release/stable.txt)/bin/windows/amd64/kubectl.exe"
+curl.exe -LO "https://dl.k8s.io/release/v1.32.0/bin/windows/amd64/kubectl.exe"
 ```
 
 ## Add the binary to your PATH
