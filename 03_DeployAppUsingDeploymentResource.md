@@ -16,18 +16,19 @@ kubectl get all -o wide
 
 ## Debugging cmds for deployment status
 ```sh
-kubectl describe deploy nginx-deployment
-kubectl logs nginx-deployment-85996f8dbd-5rfdv
+kubectl describe deploy nginx-deployment # nginx-deployment is deployment here
+kubectl logs nginx-deployment-85996f8dbd-5rfdv #logs created for pods only (nginx-deployment-85996f8dbd-5rfdv is pod here)
 ```
 
 ## Verify running nginx application
 We need to login into the cluster first because we didn't expose IP to the external world.
 ```sh
-minikube ssh
-curl <clusterIP>
-```
+minikube ssh #incase you are using minikube for cluster creating.
+curl <Internal IP of pod>
 
-**Note:** You can find the `clusterIP` by running `kubectl get svc`.
+kubectl exec -it <pod_name> -- /bin/bash #connect with pod first and then curl it's internal IP for checking running application.
+curl <Internal IP of pod>
+```
 
 ## Delete the pod
 ```sh
