@@ -23,11 +23,11 @@ kubectl logs nginx
 We need to login into the cluster first because we didn't expose ip to external world.
 ```sh
 minikube ssh #since we are using minikube as cluster 
-curl <Internal clusterIP>
+curl <Internal IP of pod>
 
 kubectl exec -it nginx -- /bin/bash #For login into pod
 kubectl exec -it nginx -c <container_name> -- /bin/bash #For login into the particular container if multiple containers are running inside pod 
-curl <Internal clusterIP>
+curl <Internal IP of pod>
 ```
 
 ## Delete the pod
