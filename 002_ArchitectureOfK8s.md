@@ -1,7 +1,8 @@
-# Architecure:
+# Architecture:
 
 - Kubernetes follows client-server architecture.
 - We have master nodes and worker nodes which contains different components for execution separate tasks.
+- Checkout `/resources/Architecture of K8s.jpg` file for details
 
 # Various components:
 - Master node
