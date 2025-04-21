@@ -1,9 +1,13 @@
 # Install kubectl
 
 ## Pre-requisite: 
-- Install docker desktop
-- Install chocolatey package manager
+- Download and install docker desktop
+- Download and install chocolatey package manager (choco)
+  * Package manager for windows(powershell) that allows to install, update and manage S/W packages.
+  * Package mananger for linux are APT, YUM, DNF etc.
 - Install curl
+
+  ```choco install curl -y```
 
 ## Download the latest release of kubectl
 ```sh
